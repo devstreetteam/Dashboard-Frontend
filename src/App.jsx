@@ -1,12 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <HeroSection />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HeroSection />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </Router>
   );
 }
 
